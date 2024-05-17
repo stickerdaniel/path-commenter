@@ -2,7 +2,10 @@
 # PathCommenter
 
 PathCommenter is a Visual Studio Code extension that automatically adds a file path comment at the top of each file if not present. It also provides a command to generate a file structure tree and copy it to the clipboard.
+
 This is particularly useful when working with ChatGPT or other AI-based code assistants. By automatically adding file path comments and generating file structure trees, it provides context about the file's location within the project. This context helps ChatGPT better understand the structure and organization of your project when you copy and paste code for assistance or debugging.
+
+https://marketplace.visualstudio.com/items?itemName=CreatasyStudio.path-commenter
 
 ## Features
 
