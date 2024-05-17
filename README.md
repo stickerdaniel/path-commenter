@@ -1,3 +1,4 @@
+
 # PathCommenter
 
 PathCommenter is a Visual Studio Code extension that automatically adds a file path comment at the top of each file if not present. It also provides a command to generate a file structure tree and copy it to the clipboard.
@@ -7,6 +8,7 @@ This is particularly useful when working with ChatGPT or other AI-based code ass
 
 - **Add File Path Comment**: Automatically adds a file path comment at the top of each file when the file is saved.
 - **Generate File Tree**: Generates a file structure tree from the open folder (or a specified subfolder) and copies it to the clipboard.
+- **Ignore Patterns**: Allows specifying files and folders to be ignored when generating the file tree and adding file path comments.
 
 ## Commands
 
@@ -17,6 +19,22 @@ This is particularly useful when working with ChatGPT or other AI-based code ass
 
 1. **Add File Path Comment**: This command runs automatically when you save a file. You can also trigger it manually from the Command Palette (`Ctrl+Shift+P`) by typing "Add File Path Comment".
 2. **Generate File Tree**: Run this command from the Command Palette (`Ctrl+Shift+P`) by typing "Generate File Tree". Optionally, specify a subfolder to generate the tree from that subfolder.
+
+## Configuration
+
+To specify files and folders to be ignored, add the `pathCommenter.ignorePatterns` setting to your `settings.json`:
+
+\`\`\`json
+{
+  "pathCommenter.ignorePatterns": [
+    "node_modules",
+    "*.log",
+    "dist",
+    ".gitignore",
+    "README.md"
+  ]
+}
+\`\`\`
 
 ## Installation
 

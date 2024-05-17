@@ -1,0 +1,7 @@
+
+{
+  "pathCommenter.ignorePatterns": [
+    ".gitignore",
+    "README.md"
+  ]
+}

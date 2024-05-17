@@ -2,7 +2,7 @@
   "name": "path-commenter",
   "displayName": "PathCommenter",
   "description": "Automatically adds a file path comment at the top of each file if not present and generates file structure tree.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "CreatasyStudio",
   "engines": {
     "vscode": "^1.89.0"
@@ -26,7 +26,21 @@
         "command": "path-commenter.generateFileTree",
         "title": "Generate File Tree"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "PathCommenter Configuration",
+      "properties": {
+        "pathCommenter.ignorePatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "List of glob patterns for files and folders to ignore when generating the file tree."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -37,18 +51,22 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.89.0",
+    "@types/micromatch": "^4.0.7",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.89.0",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
     "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/your-username/path-commenter.git"
+  },
+  "dependencies": {
+    "micromatch": "^4.0.5"
   }
 }
