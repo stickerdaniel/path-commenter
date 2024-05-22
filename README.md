@@ -27,7 +27,7 @@ https://marketplace.visualstudio.com/items?itemName=CreatasyStudio.path-commente
 
 To specify files and folders to be ignored, add the `pathCommenter.ignorePatterns` setting to your `settings.json`:
 
-\`\`\`json
+```json
 {
   "pathCommenter.ignorePatterns": [
     "node_modules",
@@ -37,7 +37,7 @@ To specify files and folders to be ignored, add the `pathCommenter.ignorePattern
     "README.md"
   ]
 }
-\`\`\`
+```
 
 ## Installation
 
