@@ -25,19 +25,7 @@ https://marketplace.visualstudio.com/items?itemName=CreatasyStudio.path-commente
 
 ## Configuration
 
-To specify files and folders to be ignored, add the `pathCommenter.ignorePatterns` setting to your `settings.json`:
-
-```json
-{
-  "pathCommenter.ignorePatterns": [
-    "node_modules",
-    "*.log",
-    "dist",
-    ".gitignore",
-    "README.md"
-  ]
-}
-```
+To specify files and folders to be ignored, add them in the vs code extension settings (PathCommenter Configuration)
 
 ## Installation
 
