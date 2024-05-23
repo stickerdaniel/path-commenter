@@ -102,11 +102,13 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'go': filePath => `// ${filePath}`,
         'rust': filePath => `// ${filePath}`,
         'json': filePath => `// ${filePath}`,
-        'yaml': filePath => `# ${filePath}`
+        'yaml': filePath => `# ${filePath}`,
+        'dart': filePath => `// ${filePath}`,
     };
 
     return commentMap[languageId] ? commentMap[languageId](filePath) : null;
 }
+
 
 function generateFileTree(dir: string, prefix: string = '', ignorePatterns: string[] = []): string {
     const items = fs.readdirSync(dir, { withFileTypes: true });
