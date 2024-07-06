@@ -1,8 +1,8 @@
 {
   "name": "path-commenter",
   "displayName": "PathCommenter",
-  "description": "Automatically adds a file path comment at the top of each file if not present and generates file structure tree.",
-  "version": "0.0.6",
+  "description": "Add File Path Comment Automatically adds a file path comment at the top of each file if not present and Generate File Tree generates file structure tree.",
+  "version": "0.1.0",
   "publisher": "CreatasyStudio",
   "engines": {
     "vscode": "^1.89.0"
@@ -11,6 +11,7 @@
     "Other"
   ],
   "main": "./out/extension.js",
+  "icon": "icon.jpg",
   "activationEvents": [
     "onCommand:path-commenter.addFilePathComment",
     "onCommand:path-commenter.generateFileTree",
@@ -64,7 +65,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/path-commenter.git"
+    "url": "https://github.com/stickerdaniel/path-commenter.git"
   },
   "dependencies": {
     "micromatch": "^4.0.5"
