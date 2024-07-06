@@ -142,6 +142,8 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'makefile': filePath => `# ${filePath}`,
         'toml': filePath => `# ${filePath}`,
         'graphql': filePath => `# ${filePath}`,
+        'jsx': filePath => `// ${filePath}`,
+        'tsx': filePath => `// ${filePath}`
     };
 
     return commentMap[languageId] ? commentMap[languageId](filePath) : null;
