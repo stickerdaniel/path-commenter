@@ -88,7 +88,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 function getCommentSyntax(languageId: string, filePath: string): string | null {
     const commentMap: { [key: string]: (filePath: string) => string } = {
-        // no json as it doesn't support comments
+        // no json comment because it doesn't support comments
         'javascript': filePath => `// ${filePath}`,
         'typescript': filePath => `// ${filePath}`,
         'python': filePath => `# ${filePath}`,
@@ -136,6 +136,12 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'ocaml': filePath => `(* ${filePath} *)`,
         'verilog': filePath => `// ${filePath}`,
         'vhdl': filePath => `-- ${filePath}`,
+        'plaintext': filePath => `// ${filePath}`, // Generic comment for plaintext
+        'dockerfile': filePath => `# ${filePath}`,
+        'powershell': filePath => `# ${filePath}`,
+        'makefile': filePath => `# ${filePath}`,
+        'toml': filePath => `# ${filePath}`,
+        'graphql': filePath => `# ${filePath}`,
     };
 
     return commentMap[languageId] ? commentMap[languageId](filePath) : null;
