@@ -98,7 +98,7 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'cpp': filePath => `// ${filePath}`,
         'java': filePath => `// ${filePath}`,
         'ruby': filePath => `# ${filePath}`,
-        'shellscript': filePath => `# ${filePath}`,
+        'shellscript': filePath => `# ${filePath}`, // Note: Sometimes 'shellscript' can be 'sh'
         'php': filePath => `// ${filePath}`,
         'go': filePath => `// ${filePath}`,
         'rust': filePath => `// ${filePath}`,
@@ -109,7 +109,7 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'perl': filePath => `# ${filePath}`,
         'sql': filePath => `-- ${filePath}`,
         'r': filePath => `# ${filePath}`,
-        'vb': filePath => `' ${filePath}`,
+        'vb': filePath => `' ${filePath}`, // Sometimes 'vb' can be 'vbscript'
         'lua': filePath => `-- ${filePath}`,
         'matlab': filePath => `% ${filePath}`,
         'erlang': filePath => `% ${filePath}`,
@@ -143,7 +143,7 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'toml': filePath => `# ${filePath}`,
         'graphql': filePath => `# ${filePath}`,
         'jsx': filePath => `// ${filePath}`,
-        'tsx': filePath => `// ${filePath}`
+        'typescriptreact': filePath => `// ${filePath}`,
     };
 
     return commentMap[languageId] ? commentMap[languageId](filePath) : null;
