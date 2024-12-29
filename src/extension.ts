@@ -93,6 +93,7 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'typescript': filePath => `// ${filePath}`,
         'python': filePath => `# ${filePath}`,
         'html': filePath => `<!-- ${filePath} -->`,
+        'svelte': filePath => `<!-- ${filePath} -->`,
         'css': filePath => `/* ${filePath} */`,
         'c': filePath => `// ${filePath}`,
         'cpp': filePath => `// ${filePath}`,
