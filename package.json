@@ -2,7 +2,7 @@
   "name": "path-commenter",
   "displayName": "PathCommenter",
   "description": "Add File Path Comment Automatically adds a file path comment at the top of each file if not present and Generate File Tree generates file structure tree.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "CreatasyStudio",
   "engines": {
     "vscode": "^1.89.0"

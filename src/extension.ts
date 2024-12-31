@@ -144,6 +144,7 @@ function getCommentSyntax(languageId: string, filePath: string): string | null {
         'toml': filePath => `# ${filePath}`,
         'graphql': filePath => `# ${filePath}`,
         'jsx': filePath => `// ${filePath}`,
+        'tsx': filePath => `// ${filePath}`,
         'typescriptreact': filePath => `// ${filePath}`,
     };
 
